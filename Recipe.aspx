@@ -28,10 +28,10 @@
                 Using 5 Ingredients or Less</p>
     
     </div>
-        <strong><a href="Default.aspx"> Home </a> | <a href="NewRecipe.aspx"> New Recipe</a> | <a href="AboutUs.aspx"> About Us</a> | <a href="Contact.aspx"> Contact </a></strong>
+        <strong><a href="Default.aspx"> Home </a> | <a href="Recipe.aspx"> New Recipe</a> | <a href="AboutUs.aspx"> About Us</a> | <a href="Contact.aspx"> Contact </a></strong>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS_HW5 %>" SelectCommand="SELECT [Recipe], [SubmittedBy], [Ingredient1], [Ingredient2], [Ingredient3], [Ingredient4], [Ingredient5], [Preparation], [Notes], [RecipeID] FROM [Table]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="252px" Width="749px">
-            <Columns>
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="50px" Width="445px">
+            <Fields>
                 <asp:BoundField DataField="Recipe" HeaderText="Recipe" SortExpression="Recipe" />
                 <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" SortExpression="SubmittedBy" />
                 <asp:BoundField DataField="Ingredient1" HeaderText="Ingredient #1" SortExpression="Ingredient1" />
@@ -41,8 +41,10 @@
                 <asp:BoundField DataField="Ingredient5" HeaderText="Ingredient #5" SortExpression="Ingredient5" />
                 <asp:BoundField DataField="Preparation" HeaderText="Preparation" SortExpression="Preparation" />
                 <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-            </Columns>
-        </asp:GridView>
+            </Fields>
+        </asp:DetailsView>
+        <br />
+        <br />
         <asp:Button ID="Button2" runat="server" Text="Edit" />
         <asp:Button ID="Button1" runat="server" Text="Delete" />
         <br />

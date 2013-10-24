@@ -28,9 +28,8 @@
                 Using 5 Ingredients or Less</p>
     
     </div>
-        <strong><a href="Default.aspx"> Home </a> | <a href="NewRecipe.aspx"> New Recipe</a> | <a href="AboutUs.aspx"> About Us</a> | <a href="Contact.aspx"> Contact </a></strong> 
+        <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="Recipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></strong> 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS_HW5 %>" SelectCommand="SELECT [Recipe], [SubmittedBy], [Ingredient1], [Ingredient2], [Ingredient3], [Ingredient4], [Ingredient5], [Preparation], [Notes], [RecipeID] FROM [Table]"></asp:SqlDataSource>
-        <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="252px" Width="749px">
             <Columns>
                 <asp:BoundField DataField="Recipe" HeaderText="Recipe" SortExpression="Recipe" />
