@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link rel="stylesheet" type="text/css" href="style.css" />
     <style type="text/css">
         .auto-style1 {
             text-align: center;
@@ -24,11 +25,11 @@
         <div style="text-align: center">
     
             <p>
-                Using 5 Ingredients or Less</p>
+                Using 5 Ingredients or Less!!</p>
     
     </div>
         <div class="auto-style1">
-        <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="Recipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></div>
+        <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="NewRecipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></div>
     <form id="form1" runat="server">
         <div>
     

@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <style type="text/css">
         .auto-style1 {
             text-align: center;
@@ -21,11 +22,12 @@
         <div style="text-align: center">
     
             <p>
-                Using 5 Ingredients or Less</p>
+                Using 5 Ingredients or Less!!</p>
     
     </div>
+        
         <div class="auto-style1">
-            <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="Recipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></div>
+            <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="NewRecipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS_HW5 %>" SelectCommand="SELECT [Recipe], [SubmittedBy], [RecipeID] FROM [Table]" DeleteCommand="DELETE FROM [Table] WHERE [RecipeID] = @RecipeID" InsertCommand="INSERT INTO [Table] ([Recipe], [SubmittedBy]) VALUES (@Recipe, @SubmittedBy)" UpdateCommand="UPDATE [Table] SET [Recipe] = @Recipe, [SubmittedBy] = @SubmittedBy WHERE [RecipeID] = @RecipeID">
             <DeleteParameters>
                 <asp:Parameter Name="RecipeID" Type="Int32" />
@@ -40,7 +42,7 @@
                 <asp:Parameter Name="RecipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="220px" style="text-align: center" Width="616px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="125px" style="text-align: center" Width="398px">
             <Columns>
                 <asp:BoundField DataField="Recipe" HeaderText="Recipe" SortExpression="Recipe" />
                 <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" SortExpression="SubmittedBy" />
