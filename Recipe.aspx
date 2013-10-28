@@ -61,7 +61,18 @@
                 <asp:Parameter Name="RecipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="50px" Width="445px">
+        <asp:DetailsView 
+            ID="DetailsView1" 
+            runat="server" 
+            AutoGenerateRows="False" 
+            DataKeyNames="RecipeID" 
+            DataSourceID="SqlDataSource1" 
+            Height="50px" 
+            Width="445px"
+            CssClass="cssgridview"
+            AlternatingRowStyle-CssClass="alt"
+            PagerStyle-CssClass="pgr"
+            >
             <Fields>
                 <asp:BoundField DataField="Recipe" HeaderText="Recipe" SortExpression="Recipe" />
                 <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" SortExpression="SubmittedBy" />

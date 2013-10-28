@@ -29,6 +29,7 @@
         <div class="auto-style1">
             <a href="Default.aspx"> <strong>Home </strong> </a> <strong>| </strong> <a href="NewRecipe.aspx"> <strong>New Recipe</strong></a><strong> | </strong> <a href="AboutUs.aspx"> <strong>About Us</strong></a><strong> | </strong> <a href="Contact.aspx"> <strong>Contact </strong> </a></div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS_HW5 %>" SelectCommand="SELECT [Recipe], [SubmittedBy], [RecipeID] FROM [Table]" DeleteCommand="DELETE FROM [Table] WHERE [RecipeID] = @RecipeID" InsertCommand="INSERT INTO [Table] ([Recipe], [SubmittedBy]) VALUES (@Recipe, @SubmittedBy)" UpdateCommand="UPDATE [Table] SET [Recipe] = @Recipe, [SubmittedBy] = @SubmittedBy WHERE [RecipeID] = @RecipeID">
+            
             <DeleteParameters>
                 <asp:Parameter Name="RecipeID" Type="Int32" />
             </DeleteParameters>
@@ -42,7 +43,20 @@
                 <asp:Parameter Name="RecipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="SqlDataSource1" Height="125px" style="text-align: center" Width="398px">
+        <asp:GridView 
+            ID="GridView1" 
+            runat="server" 
+            AutoGenerateColumns="False" 
+            DataKeyNames="RecipeID" 
+            DataSourceID="SqlDataSource1" 
+            Height="125px" 
+            style="text-align: center" 
+            Width="692px"
+            CssClass="cssgridview"
+            AlternatingRowStyle-CssClass="alt"
+            PagerStyle-CssClass="pgr"
+        >
+
             <Columns>
                 <asp:BoundField DataField="Recipe" HeaderText="Recipe" SortExpression="Recipe" />
                 <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" SortExpression="SubmittedBy" />

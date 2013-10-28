@@ -9,6 +9,7 @@
     <style type="text/css">
         .auto-style1 {
             text-align: center;
+
         }
     </style>
 </head>
